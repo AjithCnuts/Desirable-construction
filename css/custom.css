@@ -39,10 +39,10 @@
 /************************************/	
 
 :root{
-	--primary-color			: #12223B;
-	--secondary-color		: #E9F7FE;
+	--primary-color			: #6d6e70;
+	--secondary-color		: #fdf4e8;
 	--text-color			: #667282;
-	--accent-color			: #FFB703;
+	--accent-color			: #f69420;
 	--white-color			: #FFFFFF;
 	--divider-color			: #12223B30;
 	--dark-divider-color	: #FFFFFF20;
@@ -1866,6 +1866,7 @@ header.main-header .header-sticky.active{
 
 .page-header-box ol .breadcrumb-item+.breadcrumb-item::before{
     color: var(--white-color);
+	content: " - ";
 }
 
 .page-about-us{
@@ -4544,4 +4545,29 @@ header.main-header .header-sticky.active{
 	.error-page-content-heading h2{
 		font-size: 36px;
 	}
+}
+
+/*Custome Css*/
+
+.navbar-brand img{
+	position: absolute;
+	top: 5px;
+	width: 144px;
+	height: 100%;
+	object-fit: contain;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg {
+        background: #FFFFFF;
+		border: 1px solid var(--divider-color);
+		border-radius: 25px 25px 0px 0px ;
+    }
+}
+
+.main-menu ul li a{
+	color: #000;
+}
+.ml-5{
+	margin-left: 30px;
 }
