@@ -4597,6 +4597,27 @@ header.main-header .header-sticky.active{
     margin-top: 30px;
 }
 
+.plan-section .swiper-pagination {
+    position: relative;
+    text-align: center;
+    bottom: 0px;
+    margin-top: 30px;
+}
+
+.plan-section .swiper-pagination .swiper-pagination-bullet {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    opacity: 1;
+    margin: 0px 6px;
+}
+
+.plan-section .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--primary-color);
+    opacity: 1;
+}
+
 /* ====== CSS ====== */
 .steps-container {
 	display: flex;
@@ -4648,4 +4669,51 @@ header.main-header .header-sticky.active{
     max-width: 600px;
 	text-align: center;
 }
+
+.bb-package-selected {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 15px;
+    border-radius: 8px 8px 0px 0px;
+    text-align: center;
+	margin-bottom: -10px;
+  }
+
+  .package-title {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .most-chosen {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 4px;
+    animation: blink 1.2s infinite;
+  }
+
+  .bb-package-selected span {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-top: 8px;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
   
+
+  .accordion-button:focus {
+    z-index: 3;
+    outline: 0;
+    box-shadow: unset;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--accent-color);
+    background-color: var(--secondary-color);
+    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+}
