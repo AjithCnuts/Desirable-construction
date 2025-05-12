@@ -7974,3 +7974,14 @@ readers do not read off random characters that represent icons */
   .rounded-10px {
     border-radius: 40px;
 }
+
+
+.package-title {
+    COLOR: BLACK!IMPORTANT;
+}
+.most-chosen {
+    COLOR: BLACK;
+}
+.bb-package-selected span {
+    COLOR: BLACK;
+}
