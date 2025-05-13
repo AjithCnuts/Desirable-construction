@@ -7985,3 +7985,15 @@ readers do not read off random characters that represent icons */
 .bb-package-selected span {
     COLOR: BLACK;
 }
+
+
+
+.hero-slide {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-form {
+  position: relative;
+  z-index: 10;
+}
