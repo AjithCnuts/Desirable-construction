@@ -4597,6 +4597,20 @@ header.main-header .header-sticky.active{
     margin-top: 30px;
 }
 
+
+.plan-section .swiper-button-next:after, .plan-section .swiper-button-prev:after {
+    font-size: 20px!important;
+    background-color: white!important;
+    border: 1px solid #f69420!important;
+    padding: 10px 15px 10px 15px!important;
+	color: #f69420!important;
+	border-radius: 30px;
+}
+
+.plan-section .swiper-button-next, .plan-section .swiper-button-prev {
+    top: var(--swiper-navigation-top-offset, 39%);
+}
+
 .plan-section .swiper-pagination {
     position: relative;
     text-align: center;
