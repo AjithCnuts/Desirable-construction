@@ -7980,7 +7980,7 @@ readers do not read off random characters that represent icons */
     COLOR: BLACK!IMPORTANT;
 }
 .most-chosen {
-    COLOR: white;
+    color: var(--accent-color);
 }
 .bb-package-selected span {
     COLOR: BLACK;

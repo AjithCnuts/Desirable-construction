@@ -1661,11 +1661,12 @@ header.main-header .header-sticky.active{
 .main-footer{
 	background: var(--primary-color);
 	padding: 100px 0;
+	padding-bottom: 0px;
 }
 
-.footer-logo{
+/* .footer-logo{
 	margin-bottom: 40px;
-}
+} */
 
 .footer-content p{
 	color: var(--white-color);
@@ -4685,7 +4686,7 @@ header.main-header .header-sticky.active{
 }
 
 .bb-package-selected {
-    background-color: var(--primary-color);
+    background-color: #fdf4e8;
     color: white;
     font-weight: 600;
     font-size: 1rem;
