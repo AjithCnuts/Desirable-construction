@@ -246,15 +246,18 @@
     </div>
   </div>
 
-  <script>
-    window.onload = function () {
+<script>
+  window.onload = function () {
+    setTimeout(function () {
       document.getElementById('popupForm').style.display = 'flex';
-    };
+    }, 10000); // 10000 milliseconds = 10 seconds
+  };
 
-    function closePopup() {
-      document.getElementById('popupForm').style.display = 'none';
-    }
-  </script>
+  function closePopup() {
+    document.getElementById('popupForm').style.display = 'none';
+  }
+</script>
+
 
 
   <!-- About Section Start -->
