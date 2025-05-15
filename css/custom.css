@@ -197,7 +197,7 @@ body{
 	color: var(--white-color);
 	background: var(--accent-color);
 	border-radius: 12px;
-	padding: 20px 60px 20px 30px;
+	padding: 14px 60px 14px 20px;
 	border: none;
 	transition: 0.5s ease-in-out;
 	position: relative;
@@ -374,7 +374,7 @@ body{
 }
 
 .section-title h1{
-	font-size: 70px;
+	font-size: 60px;
 	font-weight: 800;
 	line-height: 1.1em;
 	letter-spacing: -0.03em;
@@ -383,7 +383,7 @@ body{
 }
 
 .section-title h2{
-	font-size: 56px;
+	font-size: 30px;
 	font-weight: 800;
 	line-height: 1.1em;
 	letter-spacing: -0.03em;
@@ -434,7 +434,7 @@ header.main-header{
 	border-bottom: 1px solid var(--dark-divider-color);
 	position: relative;
 	z-index: 100;
-	margin: 40px 40px 0px 40px;
+	margin: auto;
 }
 
 header.main-header .header-sticky{
@@ -687,9 +687,9 @@ header.main-header .header-sticky.active{
 /************************************/
 
 .hero.bg-section{
-	margin: 0 40px;
+	/* margin: 0 40px; */
 	overflow: hidden;
-	border-radius: 40px;
+	/* border-radius: 40px; */
 	background: url("../images/hero-bg.jpg") no-repeat center center;
 	background-size: cover;
 	padding: 300px 0 200px;
@@ -717,7 +717,7 @@ header.main-header .header-sticky.active{
 
 .hero-slider-layout .hero-slide{
 	position: relative;
-    padding: 300px 0 200px;
+    padding: 220px 0 150px;
 }
 
 .hero.hero-slider:before{
@@ -826,7 +826,7 @@ header.main-header .header-sticky.active{
 }
 
 .hero-content .section-title p{
-	font-size: 22px;
+	font-size: 18px;
 	color: var(--white-color);
 }
 
@@ -1635,17 +1635,19 @@ header.main-header .header-sticky.active{
 .contact-form{
 	background-color: var(--white-color);
 	border-radius: 40px;
-	padding: 50px;
+	padding:35px;
 }
 
 .contact-form .form-control{
-	padding: 15px;
+	/* padding: 12px; */
 	background-color: transparent;
 	color: var(--primary-color);
 	box-shadow: none;
 	border: none;
 	border-bottom: 1px solid var(--divider-color);
 	border-radius: 0;
+	    padding-right: 30px;
+    padding-left: 30px;
 }
 
 .contact-form .form-control::placeholder{
@@ -4562,7 +4564,6 @@ header.main-header .header-sticky.active{
     .navbar-expand-lg {
         background: #FFFFFF;
 		border: 1px solid var(--divider-color);
-		border-radius: 25px 25px 0px 0px ;
     }
 }
 
