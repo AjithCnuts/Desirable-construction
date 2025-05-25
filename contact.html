@@ -197,7 +197,7 @@
                         </div>
                         <!-- Section Title End -->
                          
-                        <form id="contactForm" action="form-handler.php" method="POST" data-toggle="validator">
+                        <form id="contactForm" action="form-handler.php" method="POST">
                             <div class="row">
                                 <div class="form-group col-md-6 mb-3">
                                     <input type="text" name="name" class="form-control" id="name" placeholder="Enter Your name" required="">
@@ -226,7 +226,7 @@
                     
                                 <div class="col-md-12">
                                     <button type="submit" class="btn-default">submit</button>
-                                    <div id="msgSubmit" class="h3 hidden"></div>
+                                    <div id="msgSubmit" class="h3 hidden" style="color: green; margin-top: 10px;"></div>
                                 </div>
                             </div>
                         </form>
@@ -450,6 +450,34 @@
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
 <script src="js/jquery-3.7.1.min.js" defer></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function() {
+  $('#contactForm').on('submit', function(e) {
+    e.preventDefault();  // prevent default form submission
+
+    var form = $(this);
+    var url = form.attr('action'); // form-handler.php
+    var formData = form.serialize(); // get all form data
+
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: formData,
+      success: function(response) {
+        $('#msgSubmit').removeClass('hidden').text(response); // show success message
+        form.trigger("reset"); // clear form fields
+      },
+      error: function(xhr, status, error) {
+        $('#msgSubmit').removeClass('hidden').text("Sorry, something went wrong.");
+      }
+    });
+  });
+});
+</script>
+
 
 </body>
 
