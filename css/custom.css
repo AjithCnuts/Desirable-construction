@@ -39,9 +39,10 @@
 /************************************/	
 
 :root{
-	--primary-color			: #6d6e70;
+	--primary-color			: black;
+	--background-color      : #6d6e70;
 	--secondary-color		: #fdf4e8;
-	--text-color			: #667282;
+	--text-color			: black;
 	--accent-color			: #f69420;
 	--white-color			: #FFFFFF;
 	--divider-color			: #12223B30;
@@ -375,7 +376,7 @@ body{
 
 .section-title h1{
 	font-size: 60px;
-	font-weight: 800;
+	font-weight: 600;
 	line-height: 1.1em;
 	letter-spacing: -0.03em;
 	margin-bottom: 0;
@@ -1265,7 +1266,7 @@ header.main-header .header-sticky.active{
 
 .cta-box{
 	position: relative;
-	background: var(--primary-color) url("../images/cta-box-bg.png") no-repeat;
+	background: var(--background-color) url("../images/cta-box-bg.png") no-repeat;
 	background-position: right bottom;
 	background-size: auto;
 	padding: 100px 0;
@@ -1585,13 +1586,15 @@ header.main-header .header-sticky.active{
 }
 
 .contact-sidebar{
-	background: var(--primary-color);
+	background: var(--background-color);
 	border-radius: 40px;
 	text-align: center;
 	padding: 40px 40px 0;
 	transition: all 0.3s ease-in-out;
 }
-
+button.accordion-button.collapsed {
+    color: black;
+}
 .contact-info{
 	margin-bottom: 30px;
 }
@@ -1661,7 +1664,7 @@ header.main-header .header-sticky.active{
 /************************************/
 
 .main-footer{
-	background: var(--primary-color);
+	background: var(--background-color);
 	padding: 100px 0;
 	padding-bottom: 0px;
 }
@@ -2157,7 +2160,7 @@ header.main-header .header-sticky.active{
 }
 
 .company-counter-item{
-	background: var(--primary-color);
+	background: var(--background-color);
 	padding: 50px 30px;
 	text-align: center;
 	border-radius: 40px;
@@ -2329,7 +2332,7 @@ header.main-header .header-sticky.active{
 }
 
 .sidebar-cta-box{
-	background: url('../images/service-sidebar-cta-bg.png') no-repeat top right, var(--primary-color);
+	background: url('../images/service-sidebar-cta-bg.png') no-repeat top right, var(--background-color);
 	background-size: auto;
 	border-radius: 40px;
 	padding: 30px;
@@ -4736,4 +4739,8 @@ header.main-header .header-sticky.active{
 
 .about-img img{
 	border-radius: 15px;
+}
+
+button.accordion-button.collapsed {
+    padding: 10px;
 }

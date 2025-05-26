@@ -989,79 +989,39 @@
               </div>
               <!-- Section Title End -->
 
-              <form
-                id="contactForm"
-                action="#"
-                method="POST"
-                data-toggle="validator"
-              >
-                <div class="row">
-                  <div class="form-group col-md-6 mb-4">
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      id="name"
-                      placeholder="Enter Your name"
-                      required=""
-                    />
-                    <div class="help-block with-errors"></div>
-                  </div>
-
-                  <div class="form-group col-md-6 mb-4">
-                    <input
-                      type="email"
-                      name="email"
-                      class="form-control"
-                      id="email"
-                      placeholder="Enter Your email"
-                      required=""
-                    />
-                    <div class="help-block with-errors"></div>
-                  </div>
-
-                  <div class="form-group col-md-6 mb-4">
-                    <input
-                      type="text"
-                      name="phone"
-                      class="form-control"
-                      id="phone"
-                      placeholder="Phone number"
-                      required=""
-                    />
-                    <div class="help-block with-errors"></div>
-                  </div>
-
-                  <div class="form-group col-md-6 mb-4">
-                    <input
-                      type="text"
-                      name="website"
-                      class="form-control"
-                      id="website"
-                      placeholder="Subject"
-                      required=""
-                    />
-                    <div class="help-block with-errors"></div>
-                  </div>
-
-                  <div class="form-group col-md-12 mb-5">
-                    <textarea
-                      name="msg"
-                      class="form-control"
-                      id="msg"
-                      rows="3"
-                      placeholder="Message"
-                      required=""
-                    ></textarea>
-                    <div class="help-block with-errors"></div>
-                  </div>
-
-                  <div class="col-md-12">
-                    <button type="submit" class="btn-default">submit</button>
-                    <div id="msgSubmit" class="h3 hidden"></div>
-                  </div>
-                </div>
-              </form>
+              <form id="contactForm" action="form-handler.php" method="POST">
+                            <div class="row">
+                                <div class="form-group col-md-6 mb-3">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Enter Your name" required="">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                    
+                                <div class="form-group col-md-6 mb-3">
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter Your email" required="">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                    
+                                <div class="form-group col-md-6 mb-3">
+                                    <input type="text" name="phone" class="form-control" id="phone" placeholder="Phone number" required="">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                    
+                                <div class="form-group col-md-6 mb-3">
+                                    <input type="text" name="subject" class="form-control" id="subject" placeholder="Subject" required="">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                    
+                                <div class="form-group col-md-12 mb-4">
+                                    <textarea name="msg" class="form-control" id="msg" rows="3" placeholder="Message" required=""></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                    
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn-default">submit</button>
+                                    <div id="msgSubmit" class="h3 hidden" style="color: green; margin-top: 10px;"></div>
+                                </div>
+                            </div>
+                        </form>
             </div>
             <!-- Contact Form end -->
           </div>
@@ -1242,6 +1202,48 @@
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
 <script src="js/jquery-3.7.1.min.js" defer></script>
-
+<script>
+  $(document).ready(function() {
+    $('#contactForm').on('submit', function(e) {
+      e.preventDefault();  // prevent default form submission
+  
+      var form = $(this);
+      var url = form.attr('action'); // form-handler.php
+      var formData = form.serialize(); // get all form data
+  
+      // Manual validation
+      var name = $('#name').val().trim();
+      var email = $('#email').val().trim();
+      var phone = $('#phone').val().trim();
+      var subject = $('#subject').val().trim();
+      var msg = $('#msg').val().trim();
+  
+      if (!name || !email || !phone || !subject || !msg) {
+        $('#msgSubmit').removeClass('hidden').css('color', 'red').text('Please fill in all fields.');
+        return;
+      }
+  
+      // Optional email format check
+      var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!emailPattern.test(email)) {
+        $('#msgSubmit').removeClass('hidden').css('color', 'red').text('Please enter a valid email address.');
+        return;
+      }
+  
+      $.ajax({
+        type: "POST",
+        url: url,
+        data: formData,
+        success: function(response) {
+          $('#msgSubmit').removeClass('hidden').css('color', 'green').text(response); // show success message
+          form.trigger("reset"); // clear form fields
+        },
+        error: function(xhr, status, error) {
+          $('#msgSubmit').removeClass('hidden').css('color', 'red').text("Sorry, something went wrong.");
+        }
+      });
+    });
+  });
+  </script>
 </body>
 </html>

@@ -306,7 +306,49 @@
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
 <script src="js/jquery-3.7.1.min.js" defer></script>
-
+<script>
+  $(document).ready(function() {
+    $('#contactForm').on('submit', function(e) {
+      e.preventDefault();  // prevent default form submission
+  
+      var form = $(this);
+      var url = form.attr('action'); // form-handler.php
+      var formData = form.serialize(); // get all form data
+  
+      // Manual validation
+      var name = $('#name').val().trim();
+      var email = $('#email').val().trim();
+      var phone = $('#phone').val().trim();
+      var subject = $('#subject').val().trim();
+      var msg = $('#msg').val().trim();
+  
+      if (!name || !email || !phone || !subject || !msg) {
+        $('#msgSubmit').removeClass('hidden').css('color', 'red').text('Please fill in all fields.');
+        return;
+      }
+  
+      // Optional email format check
+      var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!emailPattern.test(email)) {
+        $('#msgSubmit').removeClass('hidden').css('color', 'red').text('Please enter a valid email address.');
+        return;
+      }
+  
+      $.ajax({
+        type: "POST",
+        url: url,
+        data: formData,
+        success: function(response) {
+          $('#msgSubmit').removeClass('hidden').css('color', 'green').text(response); // show success message
+          form.trigger("reset"); // clear form fields
+        },
+        error: function(xhr, status, error) {
+          $('#msgSubmit').removeClass('hidden').css('color', 'red').text("Sorry, something went wrong.");
+        }
+      });
+    });
+  });
+  </script>
 </body>
 
 <!-- Mirrored from html.awaikenthemes.com/builtup/404.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 27 Apr 2025 04:08:46 GMT -->
