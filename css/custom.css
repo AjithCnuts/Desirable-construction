@@ -40,7 +40,7 @@
 
 :root{
 	--primary-color			: black;
-	--background-color      : #6d6e70;
+	--background-color       :#6d6e70;
 	--secondary-color		: #fdf4e8;
 	--text-color			: black;
 	--accent-color			: #f69420;
@@ -439,9 +439,10 @@ header.main-header{
 }
 
 header.main-header .header-sticky{
-	position: relative;
-	top: 0;
-	z-index: 100;
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+    width: 100%;
 }
 
 header.main-header .header-sticky.hide{
@@ -718,7 +719,7 @@ header.main-header .header-sticky.active{
 
 .hero-slider-layout .hero-slide{
 	position: relative;
-    padding: 220px 0 150px;
+    padding: 280px 0 150px;
 }
 
 .hero.hero-slider:before{
@@ -1270,6 +1271,11 @@ header.main-header .header-sticky.active{
 	background-position: right bottom;
 	background-size: auto;
 	padding: 100px 0;
+}
+
+
+.accordion-button{
+	color: #000;
 }
 
 .cta-box .section-title h2{
@@ -3321,6 +3327,7 @@ button.accordion-button.collapsed {
 
 	.navbar{
         padding: 20px 0px;
+		        background-color: white;
     }
 	
 	.main-menu ul li{
@@ -4136,7 +4143,7 @@ button.accordion-button.collapsed {
     }
 
 	.hero-slider-layout .hero-slide{
-		padding: 160px 0 100px;
+		padding: 240px 0 100px;
 	}
 
 	.hero-content .section-title p{
