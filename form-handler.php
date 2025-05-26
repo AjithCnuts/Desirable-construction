@@ -1,4 +1,13 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+require 'vendor/autoload.php'; // Composer autoload
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name    = $_POST['name'] ?? '';
     $email   = $_POST['email'] ?? '';
@@ -6,25 +15,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = $_POST['subject'] ?? '';
     $message = $_POST['msg'] ?? '';
 
-    $to = "leads@desirableconstruction.com"; // Your receiving email address
-    $email_subject = "Contact Form: $subject";
-    $email_body = "You have received a new message:\n\n"
-                . "Name: $name\n"
-                . "Email: $email\n"
-                . "Phone: $phone\n"
-                . "Subject: $subject\n"
-                . "Message:\n$message";
+    $mail = new PHPMailer(true);
 
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
+    try {
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.gmail.com';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'leads@desirableconstruction.com';
+        $mail->Password   = 'bvjt hxxm pupt iuic';
+        $mail->SMTPSecure = 'tls';
+        $mail->Port       = 587;
 
-    if (mail($to, $email_subject, $email_body, $headers)) {
-        echo "Message sent successfully.";
-    } else {
-        echo "Message could not be sent.";
+        $mail->setFrom('leads@desirableconstruction.com', 'Desirable Construction');
+        $mail->addAddress('leads@desirableconstruction.com');
+
+        $mail->Subject = "Contact Form: $subject";
+        $mail->Body    = "Name: $name\nEmail: $email\nPhone: $phone\nMessage:\n$message";
+
+        $mail->send();
+        echo 'Message sent successfully.';
+    } catch (Exception $e) {
+        echo "Mailer Error: " . $mail->ErrorInfo;
     }
 } else {
-    http_response_code(405); // Method Not Allowed
+    http_response_code(405);
     echo "405 - Method Not Allowed";
 }
 ?>
+
