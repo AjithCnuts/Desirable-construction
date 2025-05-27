@@ -719,7 +719,7 @@ header.main-header .header-sticky.active{
 
 .hero-slider-layout .hero-slide{
 	position: relative;
-    padding: 280px 0 150px;
+    padding: 320px 0 150px;
 }
 
 .hero.hero-slider:before{
@@ -841,7 +841,7 @@ header.main-header .header-sticky.active{
 /************************************/
 
 .about-us{
-	padding: 180px 0;
+	padding: 100px 0;
 }
 
 .about-content{
@@ -1643,7 +1643,7 @@ button.accordion-button.collapsed {
 }
 
 .contact-form{
-	background-color: var(--white-color);
+	/* background-color: var(--white-color); */
 	border-radius: 15px;
 	padding:35px;
 }
@@ -4702,9 +4702,9 @@ button.accordion-button.collapsed {
 	opacity: 1;
   }
   
-.step-content-container img.slider-image {
+/* .step-content-container img.slider-image {
     height: 150px;
-}
+} */
 
   .request-box {
     background: white;
