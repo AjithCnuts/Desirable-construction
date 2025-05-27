@@ -149,7 +149,7 @@
                         </h2>
                       </div>
 
-                      <form id="contactForm" action="landing-page.php" method="POST" >
+                      <form id="contactForm1" action="landing-page.php" method="POST" >
                         <div class="row">
                           <div class="form-group col-md-12 mb-4">
                             <input type="text" name="name" class="form-control" id="name" placeholder="Enter Your Name"
@@ -212,7 +212,7 @@
             <h2 data-cursor="-opaque">Get in touch with us</h2>
           </div>
 
-          <form id="contactForm" action="landing-page.php" method="POST">
+          <form id="contactForm2" action="landing-page.php" method="POST">
             <div class="row">
               <div class="form-group col-md-12 mb-4">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Enter Your Name" required />
@@ -2984,49 +2984,49 @@
     <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="Chat on WhatsApp" width="50" height="50">
   </a>
 
-<script>
-  $(document).ready(function() {
-    $('#contactForm').on('submit', function(e) {
-      e.preventDefault();  // prevent default form submission
-  
-      var form = $(this);
-      var url = form.attr('action'); // form-handler.php
-      var formData = form.serialize(); // get all form data
-  
-      // Manual validation
-      var name = $('#name').val().trim();
-      var email = $('#email').val().trim();
-      var phone = $('#phone').val().trim();
-      var subject = $('#subject').val().trim();
-      var msg = $('#msg').val().trim();
-  
-      if (!name || !email || !phone || !subject || !msg) {
-        $('#msgSubmit').removeClass('hidden').css('color', 'red').text('Please fill in all fields.');
-        return;
-      }
-  
-      // Optional email format check
-      var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-      if (!emailPattern.test(email)) {
-        $('#msgSubmit').removeClass('hidden').css('color', 'red').text('Please enter a valid email address.');
-        return;
-      }
-  
-      $.ajax({
-        type: "POST",
-        url: url,
-        data: formData,
-        success: function(response) {
-          $('#msgSubmit').removeClass('hidden').css('color', 'green').text(response); // show success message
-          form.trigger("reset"); // clear form fields
-        },
-        error: function(xhr, status, error) {
-          $('#msgSubmit').removeClass('hidden').css('color', 'red').text("Sorry, something went wrong.");
+  <script>
+    $(document).ready(function () {
+      $('#contactForm1, #contactForm2').on('submit', function (e) {
+        e.preventDefault();
+    
+        var form = $(this);
+        var url = form.attr('action');
+        var formData = form.serialize();
+    
+        var name = form.find('input[name="name"]').val().trim();
+        var email = form.find('input[name="email"]').val().trim();
+        var phone = form.find('input[name="phone"]').val().trim();
+        var subject = form.find('input[name="subject"]').val()?.trim() || 'Contact Form'; // fallback if no subject field
+        var msg = form.find('textarea[name="msg"]').val().trim();
+        var msgBox = form.find('#msgSubmit');
+    
+        if (!name || !email || !phone || !msg) {
+          msgBox.removeClass('hidden').css('color', 'red').text('Please fill in all fields.');
+          return;
         }
+    
+        var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (!emailPattern.test(email)) {
+          msgBox.removeClass('hidden').css('color', 'red').text('Please enter a valid email address.');
+          return;
+        }
+    
+        $.ajax({
+          type: "POST",
+          url: url,
+          data: formData,
+          success: function (response) {
+            msgBox.removeClass('hidden').css('color', 'green').text(response);
+            form.trigger("reset");
+          },
+          error: function () {
+            msgBox.removeClass('hidden').css('color', 'red').text("Sorry, something went wrong.");
+          }
+        });
       });
     });
-  });
-  </script>
+    </script>
+    
 </body>
 
 </html>
