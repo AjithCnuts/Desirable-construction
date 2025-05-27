@@ -380,7 +380,7 @@ body{
 	line-height: 1.1em;
 	letter-spacing: -0.03em;
 	margin-bottom: 0;
-	cursor: none;
+	cursor: pointer;
 }
 
 .section-title h2{
@@ -389,7 +389,7 @@ body{
 	line-height: 1.1em;
 	letter-spacing: -0.03em;
 	margin-bottom: 0;
-	cursor: none;
+	cursor: pointer;
 }
 
 .section-title h3{
@@ -945,12 +945,12 @@ header.main-header .header-sticky.active{
 
 .service-image{
 	overflow: hidden;
-	border-radius: 40px;
+	border-radius: 15px;
 }
 
 .service-image a{
 	position: relative;
-	cursor: none;
+	cursor: pointer;
 	display: block;
 }
 
@@ -962,7 +962,7 @@ header.main-header .header-sticky.active{
     right: 0;
     left: 0;
 	background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, 0) 13.02%, rgba(0, 0, 0, 0.51) 42.5%, rgba(0, 0, 0, 0.63) 70%, #000000 100%);
-	border-radius: 40px;
+	border-radius: 15px;
     background-repeat: no-repeat;
     background-position: center center;
 	z-index: 1;
@@ -1068,7 +1068,7 @@ header.main-header .header-sticky.active{
 
 .why-choose-item{
 	border: 1px solid var(--divider-color);
-	border-radius: 40px;
+	border-radius: 15px;
 	height: calc(100% - 30px);
 	margin-bottom: 30px;
 	padding: 30px;
@@ -1119,7 +1119,7 @@ header.main-header .header-sticky.active{
 .why-choose-image figure,
 .why-choose-image img{
 	height: 100%;
-	border-radius: 40px;
+	border-radius: 15px;
 }
 
 .why-choose-image:hover img{
@@ -1148,12 +1148,12 @@ header.main-header .header-sticky.active{
 
 .project-image{
 	overflow: hidden;
-	border-radius: 40px;
+	border-radius: 15px;
 }
 
 .project-image a{
 	position: relative;
-	cursor: none;
+	cursor: pointer;
 	display: block;
 }
 
@@ -1165,7 +1165,7 @@ header.main-header .header-sticky.active{
     right: 0;
     left: 0;
 	background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, 0) 13.02%, rgba(0, 0, 0, 0.51) 42.5%, rgba(0, 0, 0, 0.63) 70%, #000000 100%);
-	border-radius: 40px;
+	border-radius: 15px;
     background-repeat: no-repeat;
     background-position: center center;
 	z-index: 1;
@@ -1174,7 +1174,7 @@ header.main-header .header-sticky.active{
 
 .project-image img{
 	width: 100%;
-	border-radius: 40px;
+	border-radius: 15px;
 	aspect-ratio: 1 / 1.2;
 	object-fit: cover;
     transition: all 0.4s ease-in-out;
@@ -1309,12 +1309,12 @@ header.main-header .header-sticky.active{
 }
 
 .testimonial-slider .swiper-wrapper{
-	cursor: none;
+	cursor: pointer;
 }
 
 .testimonial-item{
 	border: 1px solid var(--divider-color);
-	border-radius: 40px;
+	border-radius: 15px;
 	padding: 30px;
 }
 
@@ -1430,7 +1430,7 @@ header.main-header .header-sticky.active{
 
 .faqs-img-2 img,
 .faqs-img-1 img{
-	border-radius: 40px;
+	border-radius: 15px;
 }
 
 .faq-accordion{
@@ -1508,25 +1508,25 @@ header.main-header .header-sticky.active{
 
 .blog-item{
 	border: 1px solid var(--divider-color);
-	border-radius: 40px;
+	border-radius: 15px;
 	height: calc(100% - 30px);
     margin-bottom: 30px;
 }
 
 .post-featured-image{
 	overflow: hidden;
-	border-radius: 40px 40px 0 0;
+	border-radius: 15px 15px 0 0;
 }
 
 .post-featured-image a{
 	display: block;
-	cursor: none;
+	cursor: pointer;
 }
 
 .post-featured-image img{
 	aspect-ratio: 1/0.65;
 	object-fit: cover;
-	border-radius: 40px 40px 0 0;
+	border-radius: 15px 15px 0 0;
 	transition: all 0.5s ease-out;
 }
 
@@ -1593,10 +1593,11 @@ header.main-header .header-sticky.active{
 
 .contact-sidebar{
 	background: var(--background-color);
-	border-radius: 40px;
+	border-radius: 15px;
 	text-align: center;
-	padding: 40px 40px 0;
+	padding: 15px 10px 0;
 	transition: all 0.3s ease-in-out;
+
 }
 button.accordion-button.collapsed {
     color: black;
@@ -1621,14 +1622,14 @@ button.accordion-button.collapsed {
 }
 
 .contact-info-content h3{
-	font-size: 24px;
+	font-size: 15px;
 	font-weight: 700;
 	color: var(--white-color);
 }
 
 .contact-info-image{
 	width: 100%;
-	max-width: 190px;
+	/* max-width: 190px; */
 	margin: 0 auto;
 }
 
@@ -1643,7 +1644,7 @@ button.accordion-button.collapsed {
 
 .contact-form{
 	background-color: var(--white-color);
-	border-radius: 40px;
+	border-radius: 15px;
 	padding:35px;
 }
 
@@ -1818,7 +1819,7 @@ button.accordion-button.collapsed {
 .page-header{
 	margin: 0 40px;
 	overflow: hidden;
-	border-radius: 40px;
+	border-radius: 15px;
 	background: url('../images/ELE/SUDHAKAR\ 3.jpg') no-repeat center center;
 	background-size: cover;
 	padding: 220px 0 120px;
@@ -1836,7 +1837,7 @@ button.accordion-button.collapsed {
 	bottom: 0;
 	background: var(--primary-color);
 	opacity: 60%;
-	border-radius: 40px;
+	border-radius: 15px;
 	z-index: 1;
 }
 
@@ -1989,7 +1990,7 @@ button.accordion-button.collapsed {
 	bottom: 20%;
 	right: 0;
 	background-color: var(--white-color);
-	border-radius: 40px;
+	border-radius: 15px;
 	padding: 40px;
 	animation: expmoveobject 3s infinite linear alternate;
 }
@@ -2020,7 +2021,7 @@ button.accordion-button.collapsed {
 .mission-vision-item{
 	padding: 30px;
 	border: 1px solid var(--divider-color);
-	border-radius: 40px;
+	border-radius: 15px;
 }
 
 .mission-vision-item .icon-box{
@@ -2110,7 +2111,7 @@ button.accordion-button.collapsed {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	cursor: none;
+	cursor: pointer;
 }
 
 .video-play-button a:before{
@@ -2169,7 +2170,7 @@ button.accordion-button.collapsed {
 	background: var(--background-color);
 	padding: 50px 30px;
 	text-align: center;
-	border-radius: 40px;
+	border-radius: 15px;
 }
 
 .company-counter-item .company-counter-content h3{
@@ -2193,14 +2194,14 @@ button.accordion-button.collapsed {
 
 .team-member-item{
 	border: 1px solid var(--divider-color);
-	border-radius: 40px;
+	border-radius: 415px;
 	height: calc(100% - 30px);
 	margin-bottom: 30px;
 	overflow: hidden;
 }
 
 .team-member-item .team-image img{
-	border-radius: 40px 40px 0 0;
+	border-radius: 15px 15px 0 0;
 	transition: all 0.5s ease-in-out;
 }
 
@@ -2286,7 +2287,7 @@ button.accordion-button.collapsed {
 
 .service-categories-list{
 	border: 1px solid var(--divider-color);
-	border-radius: 40px;
+	border-radius: 15px;
 	padding: 30px;
 	margin-bottom: 30px;
 }
@@ -2340,7 +2341,7 @@ button.accordion-button.collapsed {
 .sidebar-cta-box{
 	background: url('../images/service-sidebar-cta-bg.png') no-repeat top right, var(--background-color);
 	background-size: auto;
-	border-radius: 40px;
+	border-radius: 15px;
 	padding: 30px;
 	text-align: center;
 }
@@ -2416,7 +2417,7 @@ button.accordion-button.collapsed {
 
 .service-image-item figure,
 .service-image-item img{
-	border-radius: 40px;
+	border-radius: 15px;
 	overflow: hidden;
 	aspect-ratio: 1 / 0.7;
     object-fit: cover;
@@ -2508,7 +2509,7 @@ button.accordion-button.collapsed {
 
 .service-sustainable .service-sustainable-img-1 img,
 .service-sustainable .service-sustainable-img-2 img{
-	border-radius: 40px;
+	border-radius: 15px;
 }
 
 .service-sustainable-content{
@@ -2544,7 +2545,7 @@ button.accordion-button.collapsed {
 	background: var(--white-color);
 	padding: 30px;
 	border: 1px solid var(--divider-color);
-	border-radius: 40px;
+	border-radius: 15px;
 	height: calc(100% - 30px);
 	margin-bottom: 30px;
 	position: relative;
@@ -2573,7 +2574,7 @@ button.accordion-button.collapsed {
 .working-process-item{
 	padding: 30px;
 	border: 1px solid var(--divider-color);
-	border-radius: 40px;
+	border-radius: 15px;
 	height: calc(100% - 30px);
 	margin-bottom: 30px;
 }
@@ -2674,7 +2675,7 @@ button.accordion-button.collapsed {
 .post-image img{
 	aspect-ratio: 1 / 0.50;
 	object-fit: cover;
-	border-radius: 40px;
+	border-radius: 15px;
 }
 
 .post-content{
@@ -2908,7 +2909,7 @@ button.accordion-button.collapsed {
 }
 
 .project-featured-image img{
-	border-radius: 40px;
+	border-radius: 15px;
 	aspect-ratio: 1/ 0.6;
 	object-fit: cover;
 }
@@ -2974,7 +2975,7 @@ button.accordion-button.collapsed {
 	width: 100%;
 	aspect-ratio: 1 / 1;
 	object-fit: cover;
-	border-radius: 40px;
+	border-radius: 15px;
 }
 
 .project-sidebar{
@@ -2984,7 +2985,7 @@ button.accordion-button.collapsed {
 
 .project-info-box{
 	border: 1px solid var(--divider-color);
-	border-radius: 40px;
+	border-radius: 15px;
 	padding: 30px;
 }
 
@@ -3048,7 +3049,7 @@ button.accordion-button.collapsed {
 
 .contact-info-item{
 	border: 1px solid var(--divider-color);
-	border-radius: 40px;
+	border-radius: 15px;
 	height: calc(100% - 30px);
 	margin-bottom: 30px;
 	padding: 30px;
@@ -3173,7 +3174,7 @@ button.accordion-button.collapsed {
 
 .faq-category-box{
 	border: 1px solid var(--divider-color);
-	border-radius: 40px;
+	border-radius: 15px;
 	padding: 30px;
 }
 
@@ -3322,6 +3323,15 @@ button.accordion-button.collapsed {
 /************************************/
 /***     26. responsive css       ***/
 /************************************/
+@media only screen and (max-width: 1220px){
+	.contact-info-image {
+    display: none;
+}
+}
+
+
+
+
 
 @media only screen and (max-width: 1024px){
 
@@ -3628,7 +3638,13 @@ button.accordion-button.collapsed {
 		background-size: auto;
 		padding: 50px 0;
 	}
-
+.contact-info-wrapper {
+    gap: 0px;
+    flex-direction: column;
+}
+.contact-sidebar {
+    width: 100%;
+}
 	.contact-sidebar{
 		padding: 30px 20px 0;
 	}
@@ -4686,6 +4702,10 @@ button.accordion-button.collapsed {
 	opacity: 1;
   }
   
+.step-content-container img.slider-image {
+    height: 150px;
+}
+
   .request-box {
     background: white;
     padding: 50px 20px;

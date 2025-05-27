@@ -12,8 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name    = $_POST['name'] ?? '';
     $email   = $_POST['email'] ?? '';
     $phone   = $_POST['phone'] ?? '';
-    $subject = $_POST['subject'] ?? '';
-    $message = $_POST['msg'] ?? '';
+    $plots = $_POST['plots'] ?? '';
+    
 
     $mail = new PHPMailer(true);
 
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->addAddress('leads@desirableconstruction.com');
 
         $mail->Subject = "Contact Form: $subject";
-        $mail->Body    = "Name: $name\nEmail: $email\nPhone: $phone\nMessage:\n$message";
+        $mail->Body    = "Name: $name\nEmail: $email\nPhone: $phone\nPlots:\n$plots";
 
         $mail->send();
         echo 'Message sent successfully.';
