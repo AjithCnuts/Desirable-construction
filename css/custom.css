@@ -377,7 +377,7 @@ body{
 .section-title h1{
 	font-size: 60px;
 	font-weight: 600;
-	line-height: 1.1em;
+	line-height: 1.3em;
 	letter-spacing: -0.03em;
 	margin-bottom: 0;
 	cursor: pointer;
@@ -697,6 +697,10 @@ header.main-header .header-sticky.active{
 	padding: 300px 0 200px;
 	position: relative;
 	margin-top: -103px;
+}
+
+#home{
+    max-width: fit-content;
 }
 
 .hero.bg-section:before{
@@ -3349,6 +3353,23 @@ button.accordion-button.collapsed {
 /************************************/
 /***     26. responsive css       ***/
 /************************************/
+
+
+
+@media only screen and (max-width: 1400px){
+	.responsive-menu,
+    .navbar-toggle{
+        display: block;
+    }
+	    .navbar-expand-lg .navbar-collapse {
+        display: none!important;
+    }
+}
+
+
+
+
+
 @media only screen and (max-width: 1220px){
 	.contact-info-image {
     display: none;
@@ -3387,10 +3408,10 @@ div#coltwo {
         display: block;
     }
 
-	.responsive-menu,
+	/* .responsive-menu,
     .navbar-toggle{
         display: block;
-    }
+    } */
 
 	.light-bg-section{
 		margin: 0;
@@ -3466,7 +3487,7 @@ div#coltwo {
 	}
 
 	.hero-slider-layout .hero-slide{
-		padding: 200px 0 100px;
+		padding: 250px 0 100px;
 	}
 
 	.hero-slider-layout .swiper-pagination{
@@ -4196,7 +4217,7 @@ div#colone {
     }
 
 	.hero-slider-layout .hero-slide{
-		padding: 240px 0 100px;
+		padding: 300px 0 100px;
 	}
 
 	.hero-content .section-title p{
@@ -4750,7 +4771,8 @@ div#colone {
     border-radius: 10px;
     margin: 20px auto;
     /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
-    max-width: 600px;
+    /* max-width: 600px; */
+	max-width: 800px;
 	text-align: center;
 }
 
@@ -4815,5 +4837,51 @@ button.accordion-button.collapsed {
   .col-lg-2-4 {
     width: 20%;
     float: left;
+  }
+}
+
+
+
+.step-flex {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.step-image {
+  flex: 0 0 400px;
+  max-width: 400px;
+}
+
+.step-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#textt{
+ font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .step-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .step-image,
+  .step-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .step-text {
+    padding: 0 20px;
   }
 }
