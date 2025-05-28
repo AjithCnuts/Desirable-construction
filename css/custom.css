@@ -1065,13 +1065,17 @@ header.main-header .header-sticky.active{
 .why-choose-us{
 	padding: 100px 0 70px;
 }
-
+.clipped {
+  background-color: #fdf4e7;
+  padding: 20px;
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 95%);
+}
 .why-choose-item {
-    border-right: 1px solid var(--divider-color);
+    /* border-right: 1px solid var(--divider-color); */
     /* border-radius: 15px; */
     height: calc(100% - 30px);
     margin-bottom: 30px;
-    padding-right: 30px;
+    padding-right: 15px;
 }
 
 .why-choose-item .icon-box{
@@ -1101,7 +1105,7 @@ header.main-header .header-sticky.active{
 }
 
 .why-choose-counter h3{
-	font-size: 56px;
+	font-size: 40px;
 	letter-spacing: -0.03em;
 	line-height: 1.1em;
 	margin-bottom: 5px;
@@ -1585,12 +1589,33 @@ header.main-header .header-sticky.active{
 /***      13. Contact Us Css	  ***/
 /************************************/
 
-.contact-us{
-	background: var(--secondary-color) url("../images/contact-us-bg.png") no-repeat;
-	background-position: center center;
-	background-size: cover;
-	padding: 100px 0;
+.contact-us {
+    background: var(--secondary-color);
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
 }
+
+.contact-us::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    background: url(../images/contact-removebg-preview.png) no-repeat bottom right;
+    background-size: 50%;
+    opacity: 0.25;
+    z-index: 0;
+    pointer-events: none;
+    background-position: center right;
+}
+
+.contact-us > * {
+    position: relative;
+    z-index: 1;
+}
+
 
 .contact-sidebar{
 	background: var(--background-color);
@@ -3328,6 +3353,12 @@ button.accordion-button.collapsed {
 	.contact-info-image {
     display: none;
 }
+div#colone {
+    width: 50%;
+}
+div#coltwo {
+    width: 30%;
+}
 }
 
 
@@ -4116,7 +4147,12 @@ button.accordion-button.collapsed {
 	body{
 		font-size: 16px;
 	}
-
+div#coltwo {
+    width: 100%;
+}
+div#colone {
+    width: 100%;
+}
 	.section-row{
         margin-bottom: 30px;
     }
