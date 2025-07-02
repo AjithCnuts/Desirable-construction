@@ -4884,4 +4884,9 @@ button.accordion-button.collapsed {
   .step-text {
     padding: 0 20px;
   }
+  .second {
+    display: none;
+}
+
+
 }
